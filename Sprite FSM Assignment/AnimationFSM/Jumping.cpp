@@ -1,5 +1,6 @@
 #include <Jumping.h>
 #include <Climbing.h>
+#include <Shoveling.h>
 #include <Idle.h>
 
 #include <string>
@@ -16,3 +17,4 @@ void Jumping::climbing(Animation* a)
 	a->setCurrent(new Climbing());
 	delete this;
 }
+

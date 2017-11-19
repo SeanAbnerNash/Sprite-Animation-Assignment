@@ -11,7 +11,9 @@ public:
 		IDLE,
 		UP,
 		LEFT,
-		RIGHT
+		RIGHT,
+		SHOVEL,
+		HAMMER
 	};
 
 	void setCurrent(Action);

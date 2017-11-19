@@ -1,6 +1,7 @@
 #include <Climbing.h>
 #include <Jumping.h>
 #include <Idle.h>
+#include <Hammering.h>
 
 #include <string>
 
@@ -14,5 +15,12 @@ void Climbing::jumping(Animation* a)
 {
 	std::cout << "Climbing -> Jump" << std::endl;
 	a->setCurrent(new Jumping());
+	delete this;
+}
+
+void Climbing::hammering(Animation * a)
+{
+	std::cout << "Climbing -> Hammering" << std::endl;
+	a->setCurrent(new Hammering());
 	delete this;
 }

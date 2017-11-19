@@ -22,13 +22,18 @@ public:
 	const IntRect& getFrame(int);
 	void addFrame(IntRect&);
 	const int getCurrentFrame();
+	void setStartFrame(int t_startFrame);
+	void setEndFrame(int t_endFrame);
+	void setCurrentFrame(int t_currentFrame);
 	void update();
 	
 private:
 	Clock m_clock;
 	Time m_time;
 	vector<IntRect> m_frames;
-	int m_current_frame;
+	int m_current_frame;//The Current Frame the animation is on
+	int m_endFrame;//The Last frame in an animation loop
+	int m_startFrame;//The First Frame in an animation loop
 };
 
 #endif // !ANIMATED_SPRITE_H
